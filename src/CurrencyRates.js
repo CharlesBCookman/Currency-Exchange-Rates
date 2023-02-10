@@ -1,7 +1,7 @@
 //Business Logic
 
-export default class CurrencyRatesFor {  
-  static getTop5() {
+export default class Currency {  
+  static getExchangeRates() {
     
     return fetch(`https://v6.exchangerate-api.com/v6/57add13920ab87b9e1d0b539/latest/USD`)
       .then(function(response) {

@@ -3,33 +3,31 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Music from './CurrencyRates.js';
+import Currency from './CurrencyRates.js';
 
-function getExchangeRates() {
-  Music.getTop5()
+function getRates() {
+  Currency.getExchangeRates()
     .then(function (response) {
-      if (response.data) {
-        printElements(response);
+      if (response.result) {
+        conversionRatesAll(response.conversion_rates);
       } else {
         printError(response);
       }
     });
 }
 
-function printElements(response) {
-  for (let i = 0; i < response.data.length; i++) {
-    let pEl = document.createElement("p");
-    pEl.innerText = response.data[i].title;
-    document.querySelector("#top5-div").append(pEl);
+function conversionRatesAll(response) {
+
   }
-}
+
+function getCurrenciesgit (firstCurrency, secondCurrency)
 
 function printError() {
   alert('something went wrong');
 }
 
 function handleFormSubmission() {
-  getMusic();
+  getRates();
 }
 
 window.addEventListener("load", function () {
