@@ -1,9 +1,9 @@
-import {TESTABLE} from './../src/Template.js';
+import {Currency} from './../src/Template.js';
 
-describe('TESTABLE', () => {
+describe('Currency is a constructor grabbing currency exchange rate info from ExchangeRateAPI', () => {
 
-  test('SHOULD TEST ---------', () => {
-    //CODE TO TEST
-    expect(TESTABLE.VARIABLE).toEqual("EXPECTED VALUE");
+  test('should get an object and supply a result of success', () => {
+  let getCurrencyObject= Currency.getExchangeRates()
+    expect(getCurrencyObject.result).toEqual("success");
   });
 });

@@ -9,32 +9,32 @@ function getRates() {
   Currency.getExchangeRates()
     .then(function (response) {
       if (response.result) {
-        conversionRatesAll(response.conversion_rates);
+        getAllCurrencyRates(response);
       } else {
         printError(response);
       }
     });
 }
 
-function conversionRatesAll(response) {
-
+function getAllCurrencyRates(response) {
+  return response.conversion_rates;
   }
 
-function getCurrenciesgit (firstCurrency, secondCurrency)
+function convertCurrencies(quantity, firstCurrency, secondCurrency){
+  let currencyRates = getRates();
+  let startingCurrencyRate = currencyRates[firstCurrency];
+  let resultingCurrencyRate = currencyRates[secondCurrency];
+  let resultingValue = quantity * startingCurrencyRate / resultingCurrencyRate;
+  return resultingValue;
+}
 
 function printError() {
   alert('something went wrong');
 }
 
-function handleFormSubmission() {
-  getRates();
-}
 
 window.addEventListener("load", function () {
-  if (window.location.href.match('top5.html') != null) {
-    handleFormSubmission();
-
-  }
+  
 
 });
 
