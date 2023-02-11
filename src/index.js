@@ -9,7 +9,7 @@ function getRates() {
   Currency.getExchangeRates()
     .then(function (response) {
       if (response.result) {
-        getAllCurrencyRates(response);
+        getAllCurrencyRates(response.conversion_rates);
       } else {
         printError(response);
       }
@@ -17,16 +17,19 @@ function getRates() {
 }
 
 function getAllCurrencyRates(response) {
-  return response.conversion_rates;
-  }
-
-function convertCurrencies(quantity, firstCurrency, secondCurrency){
-  let currencyRates = getRates();
-  let startingCurrencyRate = currencyRates[firstCurrency];
-  let resultingCurrencyRate = currencyRates[secondCurrency];
-  let resultingValue = quantity * startingCurrencyRate / resultingCurrencyRate;
-  return resultingValue;
+  Object.entries(response).forEach(entry => {
+    const [key, value] = entry;
+    console.log(key, value);
+  });
 }
+
+// function convertCurrencies(quantity, firstCurrency, secondCurrency){
+//   let currencyRates = getRates();
+//   let startingCurrencyRate = currencyRates[firstCurrency];
+//   let resultingCurrencyRate = currencyRates[secondCurrency];
+//   let resultingValue = quantity * startingCurrencyRate / resultingCurrencyRate;
+//   return resultingValue;
+// }
 
 function printError() {
   alert('something went wrong');
@@ -34,7 +37,6 @@ function printError() {
 
 
 window.addEventListener("load", function () {
-  
-
+  getRates();
 });
 
