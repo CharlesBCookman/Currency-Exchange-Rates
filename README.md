@@ -1,24 +1,24 @@
-# _{Application Name}_
+# _Currency Converter_
 
-#### By _**{List of contributors}**_
+#### By _**Charles Cookman**_
 
-#### _{Brief description of application}_
+#### _Allows users to see the conversion of a specified value of 10 currencies_
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _exchangerate-api_
+* _VS Code_
+* _npm_
+* _HTML CSS Javascript_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This was a project for Epicodus to connect to an exchange rate API and have functionality to do currency exchange values_
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
+* _First you will need to go to https://www.exchangerate-api.com/ to get an API Key to use this for your own purposes_
+* _Clone my repository from _
 * _in a simple_
 * _easy-to-understand_
 * _format_

@@ -7,9 +7,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Currency Exchange Rates</title>
 </head>
-
 <body>
-  
+  <div>
+    <form id="input-currency">
+      <h4>Input Starting Currency</h4>
+      <input type="number" id="number-input"><br>
+      <label for="input-USD">USA Dollar</label>
+      <input type="radio" id="input-USD" name="input" checked>
+      <label for="input-AUD">Austrailain Dollar</label>
+      <input type="radio" id="input-AUD" name="input">
+      <label for="input-BRL">Brazilian Real</label>
+      <input type="radio" id="input-BRL" name="input">
+      <label for="input-CAD">Canadian Dollar</label>
+      <input type="radio" id="input-CAD" name="input">
+      <label for="input-CNY">Chinese Renminbi</label>
+      <input type="radio" id="input-CNY" name="input"><br>
+      <label for="input-JPY">Japanese Yen</label>
+      <input type="radio" id="input-JPY" name="input">
+      <label for="input-KRW">South Korean Won</label>
+      <input type="radio" id="input-KRW" name="input">
+      <label for="input-MXN">Mexican Peso</label>
+      <input type="radio" id="input-MXN" name="input">
+      <label for="input-RUB">Russian Ruble</label>
+      <input type="radio" id="input-RUB" name="input">
+      <label for="INR">Indian Rupee</label>
+      <input type="radio" id="input-INR" name="input">
+    </form><br>
+    <h4>Select output currency</h4><br>
+    <form id="output-currency">
+      <label for="input-USD">USA Dollar</label>
+      <input type="radio" id="output-USD" name="output" checked>
+      <label for="output-AUD">Austrailain Dollar</label>
+      <input type="radio" id="output-AUD" name="output">
+      <label for="output-BRL">Brazilian Real</label>
+      <input type="radio" id="output-BRL" name="output">
+      <label for="output-CAD">Canadian Dollar</label>
+      <input type="radio" id="output-CAD" name="output">
+      <label for="output-CNY">Chinese Renminbi</label>
+      <input type="radio" id="output-CNY" name="output"><br>
+      <label for="output-JPY">Japanese Yen</label>
+      <input type="radio" id="output-JPY" name="output">
+      <label for="output-KRW">South Korean Won</label>
+      <input type="radio" id="output-KRW" name="output">
+      <label for="output-MXN">Mexican Peso</label>
+      <input type="radio" id="output-MXN" name="output">
+      <label for="output-RUB">Russian Ruble</label>
+      <input type="radio" id="output-RUB" name="output">
+      <label for="output-INR">Indian Rupee</label>
+      <input type="radio" id="output-INR" name="output">
+    </form>
+    <button id="get-output">Get output Currency</button>
+    <p id="results"></p><br><br>
+  </div>
+  <div id="display">
+  </div>
 </body>
   
 </body>
